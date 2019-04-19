@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngPractice": {
+    "ngLab": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "mdx-np",
+      "prefix": "mdx-nl",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngPractice",
+            "outputPath": "dist/ngLab",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngPractice:build"
+            "browserTarget": "ngLab:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngPractice:build:production"
+              "browserTarget": "ngLab:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngPractice:build"
+            "browserTarget": "ngLab:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "ngPractice-e2e": {
+    "ngLab-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngPractice:serve"
+            "devServerTarget": "ngLab:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngPractice:serve:production"
+              "devServerTarget": "ngLab:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "ngPractice"
+  "defaultProject": "ngLab"
 }
